@@ -1,0 +1,753 @@
+pruneRuntimeReadOnly:  True
+pruneCache:  True
+pruneRAW:  True
+pruneTraining:  False
+pruneTokenFlow:  False
+
+
+
+
+benchmark:  DODO
+reEntrancyName:  ['flashLoan']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  1
+Simple Txs to Simple Protocol (2):  20
+User-assisted Contract (3 + 4 + 5 + 6):  21
+all classified tx:  42 / 12
+hack
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x051e-flashLoan-0xd0a494e4-start, <0x051e-init-0x5039972a-start,0x051e-init-0x5039972a-end> 0x051e-flashLoan-0xd0a494e4-end> '] 1
+('0x910fd17b9bfc42a6eea822912f036ef5a080be8a', '0x395675b56370a9f5fe8b32badfa80043f5291443bd6c8273900476880fb5221e')
+False positives:  0  out of  12
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  Opyn
+reEntrancyName:  ['borrow', 'withdraw']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  4
+Simple Txs to Simple Protocol (2):  61
+User-assisted Contract (3 + 4 + 5 + 6):  2
+all classified tx:  67 / 20
+hack
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xeb7e-borrow-0x6e2246a7-start, <0x7623-ethToTokenSwapInput-0xf39b5b9b-start,0x7623-ethToTokenSwapInput-0xf39b5b9b-end>  <0x951d-createERC20CollateralOption-0x52f89fe3-start,0x951d-createERC20CollateralOption-0x52f89fe3-end>  <0x951d-exercise-0x58b36dac-start,0x951d-exercise-0x58b36dac-end>  <0x951d-removeUnderlying-0xfaa2041f-start,0x951d-removeUnderlying-0xfaa2041f-end> 0xeb7e-borrow-0x6e2246a7-end> '] 1
+('0xe7870231992ab4b1a01814fa0a599115fe94203f', '0xa858463f30a08c6f3410ed456e59277fbe62ff14225754d2bb0b4f6a75fdc8ad')
+False positives:  0  out of  20
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  PickleFi
+reEntrancyName:  ['swapExactJarForJar', 'execute']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  1366
+Simple Txs to Simple Protocol (2):  2814
+User-assisted Contract (3 + 4 + 5 + 6):  1259
+all classified tx:  5439 / 1631
+hack
+before pruneRAW:  [' <0xcd89-getSuppliedUnleveraged-0x9c4b8163-start,0xcd89-getSuppliedUnleveraged-0x9c4b8163-end> ', ' <0x6847-swapExactJarForJar-0xff3f1869-start, <0xcd89-withdrawForSwap-0xc6223e26-start,0xcd89-withdrawForSwap-0xc6223e26-end> 0x6847-swapExactJarForJar-0xff3f1869-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6847-swapExactJarForJar-0xff3f1869-start, <0xcd89-withdraw-0x51cff8d9-start,0xcd89-withdraw-0x51cff8d9-end> 0x6847-swapExactJarForJar-0xff3f1869-end> ']
+tx:  0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0
+ == Simple Txs to Simple Protocol: 
+('0x6847259b2b3a4c17e7c43c54409810af48ba5210', '0x65ce212f0c0b8f70d44e731430072559a53dd58d118502a2cee8bdee5275ac6d')
+('0x6847259b2b3a4c17e7c43c54409810af48ba5210', '0xa39f4070c313bfd6321ba853089008e26c19dad764acfdb0f063ec9c8bf9cf99')
+('0x6847259b2b3a4c17e7c43c54409810af48ba5210', '0xb1a1ad19ac1261f0a8bfe8a03b1e8b7454eaa09a2e3cf865237c2983a9dfb78c')
+('0x6847259b2b3a4c17e7c43c54409810af48ba5210', '0xf396709ca4d14203db20562e1d2dc0e6fa6a14d16c90534c53ff95a495bede41')
+('0x6847259b2b3a4c17e7c43c54409810af48ba5210', '0xdbce6afd71144e3c8ce9dbb1b3e0713327860f2e425bc7febe9f28fe24bba86c')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0x6949-withdrawAll-0x853828b6-start,0x6949-withdrawAll-0x853828b6-end> ', ' <0x6949-deposit-0xb6b55f25-start,0x6949-deposit-0xb6b55f25-end> '] 1
+('0x2212f60bc949cf09a8bccca29038014094a70231', '0xf6be71a3b3a1aefa5315bac68eb0047bbcfc403ce1282ab7d55e30e7343d6d37')
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xcd89-getSuppliedUnleveraged-0x9c4b8163-start,0xcd89-getSuppliedUnleveraged-0x9c4b8163-end> ', ' <0x6847-swapExactJarForJar-0xff3f1869-start, <0xcd89-withdrawForSwap-0xc6223e26-start,0xcd89-withdrawForSwap-0xc6223e26-end> 0x6847-swapExactJarForJar-0xff3f1869-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6949-earn-0xd389800f-start,0x6949-earn-0xd389800f-end> ', ' <0x6847-swapExactJarForJar-0xff3f1869-start, <0xcd89-withdraw-0x51cff8d9-start,0xcd89-withdraw-0x51cff8d9-end> 0x6847-swapExactJarForJar-0xff3f1869-end> '] 1
+('0x2b0b02ce19c322b4dd55a3949b4fb6e9377f7913', '0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0')
+False positives:  1  out of  1631
+False positive ratio 0.06131207847946045 %
+
+
+
+
+benchmark:  Punk_1
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  8
+Simple Txs to Simple Protocol (2):  96
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  105 / 29
+hack
+before pruneRAW:  [' <0x3bc6-initialize-0xcc2a9a5b-start,0x3bc6-initialize-0xcc2a9a5b-end> ', ' <0x3bc6-invest-0xe8b5e51f-start,0x3bc6-invest-0xe8b5e51f-end> ', ' <0x3bc6-withdrawToForge-0x7b9967a5-start,0x3bc6-withdrawToForge-0x7b9967a5-end> ', ' <0x1f3b-initialize-0xcc2a9a5b-start,0x1f3b-initialize-0xcc2a9a5b-end> ', ' <0x1f3b-invest-0xe8b5e51f-start,0x1f3b-invest-0xe8b5e51f-end> ', ' <0x1f3b-withdrawToForge-0x7b9967a5-start,0x1f3b-withdrawToForge-0x7b9967a5-end> ', ' <0x929c-initialize-0xcc2a9a5b-start,0x929c-initialize-0xcc2a9a5b-end> ', ' <0x929c-invest-0xe8b5e51f-start,0x929c-invest-0xe8b5e51f-end> ', ' <0x929c-withdrawToForge-0x7b9967a5-start,0x929c-withdrawToForge-0x7b9967a5-end> ']
+tx:  0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x3bc6-initialize-0xcc2a9a5b-start,0x3bc6-initialize-0xcc2a9a5b-end> ', ' <0x3bc6-invest-0xe8b5e51f-start,0x3bc6-invest-0xe8b5e51f-end> ', ' <0x3bc6-withdrawToForge-0x7b9967a5-start,0x3bc6-withdrawToForge-0x7b9967a5-end> ', ' <0x1f3b-initialize-0xcc2a9a5b-start,0x1f3b-initialize-0xcc2a9a5b-end> ', ' <0x1f3b-invest-0xe8b5e51f-start,0x1f3b-invest-0xe8b5e51f-end> ', ' <0x1f3b-withdrawToForge-0x7b9967a5-start,0x1f3b-withdrawToForge-0x7b9967a5-end> ', ' <0x929c-initialize-0xcc2a9a5b-start,0x929c-initialize-0xcc2a9a5b-end> ', ' <0x929c-invest-0xe8b5e51f-start,0x929c-invest-0xe8b5e51f-end> ', ' <0x929c-withdrawToForge-0x7b9967a5-start,0x929c-withdrawToForge-0x7b9967a5-end> '] 1
+('0x00000000b2ff98680adaf8a3e382176bbfc34c8f', '0x597d11c05563611cb4ad4ed4c57ca53bbe3b7d3fefc37d1ef0724ad58904742b')
+False positives:  0  out of  29
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  Harvest1_fUSDT
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  9
+Simple Txs to Simple Protocol (2):  2039
+User-assisted Contract (3 + 4 + 5 + 6):  2
+all classified tx:  2050 / 614
+hack
+before pruneRAW:  [' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> ', ' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> ', ' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> ']
+tx:  0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> ', ' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> ', ' <0x053c-deposit-0xb6b55f25-start,0x053c-deposit-0xb6b55f25-end> ', ' <0x053c-withdraw-0x2e1a7d4d-start,0x053c-withdraw-0x2e1a7d4d-end> '] 1
+('0xc6028a9fa486f52efd2b95b949ac630d287ce0af', '0x0fc6d2ca064fc841bc9b1c1fad1fbb97bcea5c9a1b2b66ef837f1227e06519a6')
+False positives:  0  out of  614
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  Eminence
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  21
+Simple Txs to Simple Protocol (2):  8841
+User-assisted Contract (3 + 4 + 5 + 6):  11727
+all classified tx:  20589 / 6176
+hack
+before pruneRAW:  [' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ']
+tx:  0x3503253131644dd9f52802d071de74e456570374d586ddd640159cf6fb9b8ad8
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0x5ade-buy-0xd6febde8-start,0x5ade-buy-0xd6febde8-end> ', ' <0xc08f-buy-0xd6febde8-start,0xc08f-buy-0xd6febde8-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> ', ' <0xc08f-sell-0xd79875eb-start,0xc08f-sell-0xd79875eb-end> ', ' <0x5ade-sell-0xd79875eb-start,0x5ade-sell-0xd79875eb-end> '] 1
+(None, '0x3503253131644dd9f52802d071de74e456570374d586ddd640159cf6fb9b8ad8')
+False positives:  0  out of  6176
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  CheeseBank_1
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  32
+Simple Txs to Simple Protocol (2):  1044
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  1077 / 304
+hack
+before pruneRAW:  [' <0xde22-enterMarkets-0xc2998238-start,0xde22-enterMarkets-0xc2998238-end> ', ' <0x7e49-mint-0xa0712d68-start,0x7e49-mint-0xa0712d68-end> ', ' <0x833e-refresh-0xceb2cff1-start,0x833e-refresh-0xceb2cff1-end> ', ' <0x5e18-borrow-0xc5ebeaec-start,0x5e18-borrow-0xc5ebeaec-end> ', ' <0x4c2a-borrow-0xc5ebeaec-start,0x4c2a-borrow-0xc5ebeaec-end> ', ' <0xa80e-borrow-0xc5ebeaec-start,0xa80e-borrow-0xc5ebeaec-end> ']
+tx:  0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xde22-enterMarkets-0xc2998238-start,0xde22-enterMarkets-0xc2998238-end> ', ' <0x7e49-mint-0xa0712d68-start,0x7e49-mint-0xa0712d68-end> ', ' <0x833e-refresh-0xceb2cff1-start,0x833e-refresh-0xceb2cff1-end> ', ' <0x5e18-borrow-0xc5ebeaec-start,0x5e18-borrow-0xc5ebeaec-end> ', ' <0x4c2a-borrow-0xc5ebeaec-start,0x4c2a-borrow-0xc5ebeaec-end> ', ' <0xa80e-borrow-0xc5ebeaec-start,0xa80e-borrow-0xc5ebeaec-end> '] 1
+('0x9e0259437804c7bf175421a451bc80611a0b93c3', '0x600a869aa3a259158310a233b815ff67ca41eab8961a49918c2031297a02f1cc')
+False positives:  0  out of  304
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  RevestFi
+reEntrancyName:  ['mint']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  18
+Simple Txs to Simple Protocol (2):  1226
+User-assisted Contract (3 + 4 + 5 + 6):  409
+all classified tx:  1653 / 505
+hack
+before pruneRAW:  [' <0x2320-mintAddressLock-0x02e236bc-start,0x2320-mintAddressLock-0x02e236bc-end> ', ' <0x2320-mintAddressLock-0x02e236bc-start,0x2320-mintAddressLock-0x02e236bc-end> ', ' <0x2320-withdrawFNFT-0xf2465f09-start,0x2320-withdrawFNFT-0xf2465f09-end> ']
+tx:  0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x2320-mintAddressLock-0x02e236bc-start,0x2320-mintAddressLock-0x02e236bc-end> ', ' <0x2320-mintAddressLock-0x02e236bc-start,0x2320-mintAddressLock-0x02e236bc-end> ', ' <0x2320-withdrawFNFT-0xf2465f09-start,0x2320-withdrawFNFT-0xf2465f09-end> '] 1
+('0xb480ac726528d1c195cd3bb32f19c92e8d928519', '0xe0b0c2672b760bef4e2851e91c69c8c0ad135c6987bbf1f43f5846d89e691428')
+False positives:  0  out of  505
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  VisorFi
+reEntrancyName:  ['deposit']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  26
+Simple Txs to Simple Protocol (2):  1665
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  1692 / 506
+hack
+ == Simple Txs to Simple Protocol: 
+('0xc9f27a50f82571c1c8423a42970613b8dbda14ef', '0x8ab328fad0471689a53283a6c9b96a5b1da9e6f9eeba700188748e1c9a3c0c64')
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xc9f2-deposit-0x2e2d2984-start, <0xc9f2-deposit-0x2e2d2984-start, <0x3a84-mint-0x40c10f19-start,0x3a84-mint-0x40c10f19-end> 0xc9f2-deposit-0x2e2d2984-end>  <0x3a84-mint-0x40c10f19-start,0x3a84-mint-0x40c10f19-end> 0xc9f2-deposit-0x2e2d2984-end> '] 1
+('0x10c509aa9ab291c76c45414e7cdbd375e1d5ace8', '0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f')
+False positives:  0  out of  506
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  BeanstalkFarms_interface
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  21
+Simple Txs to Simple Protocol (2):  3175
+User-assisted Contract (3 + 4 + 5 + 6):  2894
+all classified tx:  6090 / 1825
+hack
+before pruneRAW:  [' <0x3a70-add_liquidity-0x0b4c7e4d-start,0x3a70-add_liquidity-0x0b4c7e4d-end> ', ' <0xd652-add_liquidity-0x0b4c7e4d-start,0xd652-add_liquidity-0x0b4c7e4d-end> ', ' <0xc1e0-deposit-0x47e7ef24-start,0xc1e0-deposit-0x47e7ef24-end> ', ' <0xc1e0-deposit-0x47e7ef24-start,0xc1e0-deposit-0x47e7ef24-end> ', ' <0xc1e0-vote-0x9094c763-start,0xc1e0-vote-0x9094c763-end> ', ' <0xc1e0-emergencyCommit-0x73015684-start,0xc1e0-emergencyCommit-0x73015684-end> ', ' <0x3a70-remove_liquidity_one_coin-0x1a4d01d2-start,0x3a70-remove_liquidity_one_coin-0x1a4d01d2-end> ', ' <0xd652-remove_liquidity_one_coin-0x1a4d01d2-start,0xd652-remove_liquidity_one_coin-0x1a4d01d2-end> ']
+tx:  0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+[' <0xd652-exchange-0xddc1f59d-start,0xd652-exchange-0xddc1f59d-end> ', ' <0x3a70-exchange_underlying-0x44ee1986-start,0x3a70-exchange_underlying-0x44ee1986-end> '] 26
+('0x45716d9eddbc332df1d42b9f540fbebed671b20f', '0x622a927f7efd294f8e587ad0a6e08b6c2d1f1ec535cdfe13d4a4ccc5c886bf7c')
+[' <0xd652-exchange-0x3df02124-start,0xd652-exchange-0x3df02124-end> ', ' <0x3a70-exchange_underlying-0xa6417ed6-start,0x3a70-exchange_underlying-0xa6417ed6-end> '] 6
+('0x83a30b9c73de15560aa02a18964c45ad7a41d88e', '0x74ef0df572d433f8ed0a7790972d42535630d4800bc2999ec1aee18e6891a5b3')
+[' <0x3a70-exchange_underlying-0x44ee1986-start,0x3a70-exchange_underlying-0x44ee1986-end> ', ' <0xd652-exchange-0xddc1f59d-start,0xd652-exchange-0xddc1f59d-end> '] 3
+('0x45716d9eddbc332df1d42b9f540fbebed671b20f', '0x948bd2124c2bdba1609ecf2de7b1ad8330c8134f6ba52bf7b6df5d0c0ec2b284')
+ == Hack Call Flows: 
+[' <0x3a70-add_liquidity-0x0b4c7e4d-start,0x3a70-add_liquidity-0x0b4c7e4d-end> ', ' <0xd652-add_liquidity-0x0b4c7e4d-start,0xd652-add_liquidity-0x0b4c7e4d-end> ', ' <0xc1e0-deposit-0x47e7ef24-start,0xc1e0-deposit-0x47e7ef24-end> ', ' <0xc1e0-deposit-0x47e7ef24-start,0xc1e0-deposit-0x47e7ef24-end> ', ' <0xc1e0-vote-0x9094c763-start,0xc1e0-vote-0x9094c763-end> ', ' <0xc1e0-emergencyCommit-0x73015684-start,0xc1e0-emergencyCommit-0x73015684-end> ', ' <0x3a70-remove_liquidity_one_coin-0x1a4d01d2-start,0x3a70-remove_liquidity_one_coin-0x1a4d01d2-end> ', ' <0xd652-remove_liquidity_one_coin-0x1a4d01d2-start,0xd652-remove_liquidity_one_coin-0x1a4d01d2-end> '] 1
+(None, '0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7')
+False positives:  35  out of  1825
+False positive ratio 1.9178082191780823 %
+
+
+
+
+benchmark:  ValueDeFi
+reEntrancyName:  ['executeTransaction']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  32
+Simple Txs to Simple Protocol (2):  262
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  295 / 88
+hack
+before pruneRAW:  [' <0x8764-deposit-0x341cd53a-start,0x8764-deposit-0x341cd53a-end> ', ' <0x55bf-withdrawFor-0x39bb96a8-start,0x55bf-withdrawFor-0x39bb96a8-end> ']
+tx:  0x46a03488247425f845e444b9c10b52ba3c14927c687d38287c0faddc7471150a
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x8764-deposit-0x341cd53a-start,0x8764-deposit-0x341cd53a-end> ', ' <0x55bf-withdrawFor-0x39bb96a8-start,0x55bf-withdrawFor-0x39bb96a8-end> '] 1
+('0x675bd0a0b03096c5ead734cfa00c7620538c7c6f', '0x46a03488247425f845e444b9c10b52ba3c14927c687d38287c0faddc7471150a')
+False positives:  0  out of  88
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  XCarnival
+reEntrancyName:  ['upgradeTo', 'upgradeToAndCall']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  4
+Simple Txs to Simple Protocol (2):  336
+User-assisted Contract (3 + 4 + 5 + 6):  2
+all classified tx:  342 / 102
+hack
+before pruneRAW:  [' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ']
+tx:  0xabfcfaf3620bbb2d41a3ffea6e31e93b9b5f61c061b9cfc5a53c74ebe890294d
+before pruneRAW:  [' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ']
+tx:  0x51cbfd46f21afb44da4fa971f220bd28a14530e1d5da5009cfbdfee012e57e35
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> '] 1
+('0xf70f691d30ce23786cfb3a1522cfd76d159aca8d', '0xabfcfaf3620bbb2d41a3ffea6e31e93b9b5f61c061b9cfc5a53c74ebe890294d')
+[' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> ', ' <0xb387-borrow-0x0c28d13e-start,0xb387-borrow-0x0c28d13e-end> '] 1
+('0xf70f691d30ce23786cfb3a1522cfd76d159aca8d', '0x51cbfd46f21afb44da4fa971f220bd28a14530e1d5da5009cfbdfee012e57e35')
+False positives:  0  out of  102
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  Warp_interface
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  8
+Simple Txs to Simple Protocol (2):  147
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  156 / 44
+hack
+before pruneRAW:  [' <0x13db-provideCollateral-0xf0c3c06b-start,0x13db-provideCollateral-0xf0c3c06b-end> ', ' <0xba53-borrowSC-0x0a555989-start,0xba53-borrowSC-0x0a555989-end> ', ' <0xba53-borrowSC-0x0a555989-start,0xba53-borrowSC-0x0a555989-end> ']
+tx:  0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0x13db-provideCollateral-0xf0c3c06b-start,0x13db-provideCollateral-0xf0c3c06b-end> ', ' <0xba53-borrowSC-0x0a555989-start,0xba53-borrowSC-0x0a555989-end> ', ' <0xba53-borrowSC-0x0a555989-start,0xba53-borrowSC-0x0a555989-end> '] 1
+('0xdf8bee861227ffc5eea819c332a1c170ae3dbacb', '0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090')
+False positives:  0  out of  44
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  UmbrellaNetwork
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  1
+Simple Txs to Simple Protocol (2):  57
+User-assisted Contract (3 + 4 + 5 + 6):  1
+all classified tx:  59 / 17
+hack
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+False positives:  0  out of  17
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  IndexFi
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  9
+Simple Txs to Simple Protocol (2):  5004
+User-assisted Contract (3 + 4 + 5 + 6):  15606
+all classified tx:  20641 / 6192
+hack
+before pruneRAW:  [' <0xf00a-reindexPool-0x50b1e342-start,0xf00a-reindexPool-0x50b1e342-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xf00a-updateMinimumBalance-0x034b904e-start,0xf00a-updateMinimumBalance-0x034b904e-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-gulp-0x8c28cbe8-start,0xfa6d-gulp-0x8c28cbe8-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> ']
+tx:  0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa
+ == Simple Txs to Simple Protocol: 
+('0x95129751769f99cc39824a0793ef4933dd8bb74b', '0x0fa9b03e750e413b76143313aeb3a1b4d2b89548f0031f3c32962ed3941c5a0b')
+ == Another Famous DeFi Protocol Call Flows: 
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xf00a-reindexPool-0x50b1e342-start,0xf00a-reindexPool-0x50b1e342-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xfa6d-swapExactAmountIn-0x8201aa3f-start,0xfa6d-swapExactAmountIn-0x8201aa3f-end> ', ' <0xf00a-updateMinimumBalance-0x034b904e-start,0xf00a-updateMinimumBalance-0x034b904e-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-gulp-0x8c28cbe8-start,0xfa6d-gulp-0x8c28cbe8-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-joinswapExternAmountIn-0x5db34277-start,0xfa6d-joinswapExternAmountIn-0x5db34277-end> ', ' <0xfa6d-exitPool-0xb02f0b73-start,0xfa6d-exitPool-0xb02f0b73-end> '] 1
+('0x277e851587eb5da22b52a10f4788576e68150277', '0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa')
+False positives:  0  out of  6170
+False positive ratio 0.0 %
+
+
+
+
+benchmark:  RariCapital1
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  3
+Simple Txs to Simple Protocol (2):  618
+User-assisted Contract (3 + 4 + 5 + 6):  44
+all classified tx:  665 / 199
+hack
+before pruneRAW:  [' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-withdraw-0x2e1a7d4d-start,0xd6e1-withdraw-0x2e1a7d4d-end> ', ' <0xd6e1-withdraw-0x2e1a7d4d-start,0xd6e1-withdraw-0x2e1a7d4d-end> ']
+tx:  0x4764dc6ff19a64fc1b0e57e735661f64d97bc1c44e026317be8765358d0a7392
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> '] 2
+('0x1c5d3785ac5a03be0505421fd36e38862635fd54', '0x6b48a881eaafdf201ff169fcbd0956835e9518663cf7d382dbd57cfc1ba8ff77')
+[' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> '] 1
+('0xeb0e5d49c5504dfd850e9d28eb69ba8d8cc02736', '0x890ee194b282a196aa04d8c9d56e888c1eb4080264d0c1d77b5a22f99dd7320e')
+[' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> '] 1
+('0xeb0e5d49c5504dfd850e9d28eb69ba8d8cc02736', '0x5b84c661cb0cb0e28728c403c120856e605f37a807ed902e3f2a33956a08de97')
+ == User-assisted Contract Call Flows: 
+ == Hack Call Flows: 
+[' <0xd6e1-deposit-0xd0e30db0-start,0xd6e1-deposit-0xd0e30db0-end> ', ' <0xd6e1-withdraw-0x2e1a7d4d-start,0xd6e1-withdraw-0x2e1a7d4d-end> ', ' <0xd6e1-withdraw-0x2e1a7d4d-start,0xd6e1-withdraw-0x2e1a7d4d-end> '] 1
+('0x67b66c99d3eb37fa76aa3ed1ff33e8e39f0b9c7a', '0x4764dc6ff19a64fc1b0e57e735661f64d97bc1c44e026317be8765358d0a7392')
+False positives:  4  out of  199
+False positive ratio 2.0100502512562812 %
+
+
+
+
+benchmark:  Yearn1_interface
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  302
+Simple Txs to Simple Protocol (2):  19419
+User-assisted Contract (3 + 4 + 5 + 6):  7428
+all classified tx:  27149 / 8002
+hack
+before pruneRAW:  [' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ']
+tx:  0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b
+ == Simple Txs to Simple Protocol: 
+('0xfeb4acf3df3cdea7399794d0869ef76a6efaff52', '0x49d62533adb1131d476ff0a4f67d5a41ba1e65c2ceeb1de54eb8ad9d4f87bf8e')
+('0xfeb4acf3df3cdea7399794d0869ef76a6efaff52', '0xba7e0dd1fd0f7f675a732d4f8338e76f95132e71fb02123f75135403b843f038')
+('0x39aff7827b9d0de80d86de295fe62f7818320b76', '0x76ed2589df9ade88309639c7a3896c51a90e7357230245bc984fa1acc97ce55b')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> '] 1
+('0x17e8ca1b4798b97602895f63206afcd1fc90ca5f', '0x0ac385243dbf56529f4d2285e61fba02f32f731a143601b3a5a364bf1cfe8cc6')
+ == User-assisted Contract Call Flows: 
+[' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> '] 2
+('0x360f8653f4ea40e12f6e41ee3c2488aa1521aa79', '0x81504d79bd14218ea8de3b96c57ffeb513b3e4f03131c55ec56fcff087355276')
+[' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-withdrawAll-0x853828b6-start,0xacd4-withdrawAll-0x853828b6-end> '] 1
+('0x6e2c1cff953b001c90a6dff482bc858d08099377', '0x5fd7be07758d5ed07175ddd6a54a10dd91ba4777eee5206b383b03f5d50165f8')
+ == Hack Call Flows: 
+[' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> ', ' <0xacd4-deposit-0xb6b55f25-start,0xacd4-deposit-0xb6b55f25-end> ', ' <0xacd4-earn-0xd389800f-start,0xacd4-earn-0xd389800f-end> ', ' <0xacd4-withdraw-0x2e1a7d4d-start,0xacd4-withdraw-0x2e1a7d4d-end> '] 1
+('0x62494b3ed9663334e57f23532155ea0575c487c5', '0x59faab5a1911618064f1ffa1e4649d85c99cfd9f0d64dcebbc1af7d7630da98b')
+False positives:  4  out of  8002
+False positive ratio 0.04998750312421895 %
+
+
+
+
+benchmark:  InverseFi
+reEntrancyName:  []
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  201
+Simple Txs to Simple Protocol (2):  6123
+User-assisted Contract (3 + 4 + 5 + 6):  237
+all classified tx:  6562 / 1968
+hack
+before pruneRAW:  [' <0x1637-mint-0xa0712d68-start,0x1637-mint-0xa0712d68-end> ', ' <0x7fcb-borrow-0xc5ebeaec-start,0x7fcb-borrow-0xc5ebeaec-end> ', ' <0x697b-borrow-0xc5ebeaec-start,0x697b-borrow-0xc5ebeaec-end> ', ' <0x1778-borrow-0xc5ebeaec-start,0x1778-borrow-0xc5ebeaec-end> ', ' <0xde2a-borrow-0xc5ebeaec-start,0xde2a-borrow-0xc5ebeaec-end> ']
+tx:  0x600373f67521324c8068cfd025f121a0843d57ec813411661b07edc5ff781842
+ == Simple Txs to Simple Protocol: 
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0x4dcf-redeemAllowed-0xeabe7d91-start,0x4dcf-redeemAllowed-0xeabe7d91-end> ', ' <0x4dcf-claimComp-0xe9af0292-start,0x4dcf-claimComp-0xe9af0292-end> '] 4
+('0x50b5501a4a1b1f89504db0a75def5f1060a98ea6', '0xa9b85afc9e4d5fcc1bdf949554e8304be3a4e84f32bd0f22c024a1963cabbdf3')
+ == User-assisted Contract Call Flows: 
+[' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> ', ' <0x697b-redeem-0xdb006a75-start,0x697b-redeem-0xdb006a75-end> '] 22
+('0x6ee33c4a192118ea664612aec6f7b6e4aef78b87', '0xe84ca1c50dbebea5e60175a5af582df7db24fc8d27961975e9fe6bd2efa1363a')
+[' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> ', ' <0x697b-redeemUnderlying-0x852a12e3-start,0x697b-redeemUnderlying-0x852a12e3-end> '] 6
+('0xeef86c2e49e11345f1a693675df9a38f7d880c8f', '0x0767a92fcdb4b9e3f32c5c259af5562b4466d47d8d3a6c0a3a4fcf5d1327c28b')
+[' <0x4dcf-redeemAllowed-0xeabe7d91-start,0x4dcf-redeemAllowed-0xeabe7d91-end> ', ' <0x4dcf-claimComp-0xe9af0292-start,0x4dcf-claimComp-0xe9af0292-end> '] 6
+('0x16388463d60ffe0661cf7f1f31a7d658ac790ff7', '0x95f9ef77a67f133a33a997e3bac9ed9b7b6e1457aba7a97afb0d491966719fe1')
+[' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> ', ' <0x1637-redeem-0xdb006a75-start,0x1637-redeem-0xdb006a75-end> '] 5
+('0xc90bffb8955e2d69780de7a43a11cf113d5e476d', '0x1ea957ce3bbee525dc2a0704e737829532830d856f32c5f45c5eba3216b22c12')
+[' <0x7fcb-accrueInterest-0xa6afed95-start,0x7fcb-accrueInterest-0xa6afed95-end> ', ' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> '] 4
+('0xe17721de7ee9510067a097199a7b848aa70d27da', '0x66ed2c448c5699e05e9fe356953d40205e3db1ac37b1652f6c27164e80712b1f')
+[' <0x697b-liquidateBorrow-0xaae40a2a-start,0x697b-liquidateBorrow-0xaae40a2a-end> ', ' <0x7fcb-redeem-0xdb006a75-start,0x7fcb-redeem-0xdb006a75-end> '] 2
+('0x6ee33c4a192118ea664612aec6f7b6e4aef78b87', '0xc27139d94ab89216822cd74831d5bb16cb98dea7731aa7c6001b5fdac17f8ef2')
+[' <0x697b-mint-0x1249c58b-start,0x697b-mint-0x1249c58b-end> ', ' <0x697b-borrow-0xc5ebeaec-start,0x697b-borrow-0xc5ebeaec-end> '] 2
+('0x16089279efbac25b174686e60f89a5f8fd5fb8a6', '0x0aa00c2e53f6d31cd92cd86da9a00792d1aaaf540abb24f3b8a4bc4c7f8b71bf')
+[' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> ', ' <0xde2a-redeem-0xdb006a75-start,0xde2a-redeem-0xdb006a75-end> '] 2
+('0x8cc4264361216b9e3ca4d764cbf317c0c746780e', '0x67ddc8c8f121c06b7aeb44903d1243575f00bc495a148452a583e13733691bef')
+[' <0x1778-liquidateBorrow-0xf5e3c462-start,0x1778-liquidateBorrow-0xf5e3c462-end> ', ' <0x697b-redeem-0xdb006a75-start,0x697b-redeem-0xdb006a75-end> '] 2
+('0x64bb36be60bf43a3c455a28ebb0f1cfcbba30454', '0x31ab1ba85d806eb32a76e8d2606f9054409f9b76902640521005faab3ff5eadc')
+[' <0x697b-liquidateBorrow-0xaae40a2a-start,0x697b-liquidateBorrow-0xaae40a2a-end> ', ' <0x697b-redeem-0xdb006a75-start,0x697b-redeem-0xdb006a75-end> '] 1
+('0x6ee33c4a192118ea664612aec6f7b6e4aef78b87', '0xcba5c985b5358348acb060b38046eed0859976246f28589f6529b5c574692898')
+[' <0x4dcf-enterMarkets-0xc2998238-start,0x4dcf-enterMarkets-0xc2998238-end> ', ' <0x697b-mint-0x1249c58b-start,0x697b-mint-0x1249c58b-end> ', ' <0x4dcf-enterMarkets-0xc2998238-start,0x4dcf-enterMarkets-0xc2998238-end> ', ' <0x7fcb-borrow-0xc5ebeaec-start,0x7fcb-borrow-0xc5ebeaec-end> '] 1
+('0x16089279efbac25b174686e60f89a5f8fd5fb8a6', '0x8cb09584cf0b01941795bbafae3c6ded54c096928dca07bdc84a412f01a074cc')
+[' <0x697b-borrowBalanceCurrent-0x17bfdfbc-start,0x697b-borrowBalanceCurrent-0x17bfdfbc-end> ', ' <0x697b-repayBorrow-0x4e4d9fea-start,0x697b-repayBorrow-0x4e4d9fea-end> ', ' <0x697b-redeemUnderlying-0x852a12e3-start,0x697b-redeemUnderlying-0x852a12e3-end> '] 1
+('0x16089279efbac25b174686e60f89a5f8fd5fb8a6', '0xd1c01ce269719f7dfe2274db750720472d1f9e2f532ea31ba5dc70ac243176dd')
+[' <0x7fcb-borrowBalanceCurrent-0x17bfdfbc-start,0x7fcb-borrowBalanceCurrent-0x17bfdfbc-end> ', ' <0x7fcb-repayBorrow-0x0e752702-start,0x7fcb-repayBorrow-0x0e752702-end> ', ' <0x697b-balanceOfUnderlying-0x3af9e669-start,0x697b-balanceOfUnderlying-0x3af9e669-end> ', ' <0x697b-redeemUnderlying-0x852a12e3-start,0x697b-redeemUnderlying-0x852a12e3-end> '] 1
+('0x16089279efbac25b174686e60f89a5f8fd5fb8a6', '0xaef20fa635c96baf486d818273ebb880e52250eacfa2e80076225efca1cb92df')
+[' <0x7fcb-accrueInterest-0xa6afed95-start,0x7fcb-accrueInterest-0xa6afed95-end> ', ' <0x1778-accrueInterest-0xa6afed95-start,0x1778-accrueInterest-0xa6afed95-end> ', ' <0x1778-liquidateBorrow-0xf5e3c462-start,0x1778-liquidateBorrow-0xf5e3c462-end> '] 1
+('0xdc4e2ad3c9d25caa5a6b60af9f304658c9815c10', '0xf81c9af859315c4cacbb0b58fec62ae615e34f86376647c3b2adab5a14195e48')
+[' <0x697b-mint-0x1249c58b-start,0x697b-mint-0x1249c58b-end> ', ' <0x4dcf-enterMarkets-0xc2998238-start,0x4dcf-enterMarkets-0xc2998238-end> ', ' <0x7fcb-borrow-0xc5ebeaec-start,0x7fcb-borrow-0xc5ebeaec-end> '] 1
+('0xefa19ab6aa22593cc36a1a49ca394af4b8522763', '0x241942b5d15bba4d3dc415d68f5d393669d337243b2b0a4ff37b32d0b2e7ba41')
+[' <0x697b-mint-0x1249c58b-start,0x697b-mint-0x1249c58b-end> ', ' <0x7fcb-borrow-0xc5ebeaec-start,0x7fcb-borrow-0xc5ebeaec-end> '] 1
+('0xefa19ab6aa22593cc36a1a49ca394af4b8522763', '0x60a57ffcb7f88ed836880c2d9bc9fe1e491c3dc3f5d255148101a383e8daa6da')
+[' <0xde2a-liquidateBorrow-0xf5e3c462-start,0xde2a-liquidateBorrow-0xf5e3c462-end> ', ' <0xde2a-redeem-0xdb006a75-start,0xde2a-redeem-0xdb006a75-end> '] 1
+('0x83884ec924d43b6c6d1c52d7b6a57ce4121a4a53', '0xb672fe0dcb477f10b3817eb9927780caf596b035dd610f1d762216754989ca3e')
+[' <0x7fcb-repayBorrow-0x0e752702-start,0x7fcb-repayBorrow-0x0e752702-end> ', ' <0x697b-redeem-0xdb006a75-start,0x697b-redeem-0xdb006a75-end> '] 1
+('0xefa19ab6aa22593cc36a1a49ca394af4b8522763', '0xc909ba6401695317c2fe533c7ef6c6505f916c3f8feec1230c4c27904e49fb45')
+[' <0x4dcf-mintAllowed-0x4ef4c3e1-start,0x4dcf-mintAllowed-0x4ef4c3e1-end> ', ' <0x4dcf-redeemAllowed-0xeabe7d91-start,0x4dcf-redeemAllowed-0xeabe7d91-end> ', ' <0x4dcf-claimComp-0xe9af0292-start,0x4dcf-claimComp-0xe9af0292-end> '] 1
+('0x16388463d60ffe0661cf7f1f31a7d658ac790ff7', '0x73fa8dc1b6950e0ce7d5cf580cd223eaf7d1bb23fb1af6c6a19b0bb0e3f21f4e')
+[' <0x7fcb-liquidateBorrow-0xf5e3c462-start,0x7fcb-liquidateBorrow-0xf5e3c462-end> ', ' <0x1778-redeem-0xdb006a75-start,0x1778-redeem-0xdb006a75-end> '] 1
+('0x83884ec924d43b6c6d1c52d7b6a57ce4121a4a53', '0x2524ec76aec92867e58f9afe95422dae212e6d82a071fc4fd0d6dde9a38c2a3f')
+ == Hack Call Flows: 
+[' <0x1637-mint-0xa0712d68-start,0x1637-mint-0xa0712d68-end> ', ' <0x7fcb-borrow-0xc5ebeaec-start,0x7fcb-borrow-0xc5ebeaec-end> ', ' <0x697b-borrow-0xc5ebeaec-start,0x697b-borrow-0xc5ebeaec-end> ', ' <0x1778-borrow-0xc5ebeaec-start,0x1778-borrow-0xc5ebeaec-end> ', ' <0xde2a-borrow-0xc5ebeaec-start,0xde2a-borrow-0xc5ebeaec-end> '] 1
+('0xea0c959bbb7476ddd6cd4204bdee82b790aa1562', '0x600373f67521324c8068cfd025f121a0843d57ec813411661b07edc5ff781842')
+False positives:  66  out of  1967
+False positive ratio 3.355363497712252 %
+
+
+
+
+benchmark:  bZx2
+reEntrancyName:  ['flashBorrowToken']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  21
+Simple Txs to Simple Protocol (2):  452
+User-assisted Contract (3 + 4 + 5 + 6):  238
+all classified tx:  711 / 213
+hack
+ == Simple Txs to Simple Protocol: 
+('0x1f8bdad5f30effdf14c8da175349c7207bb370f8', '0x9ed7b3f4fbcc5fbb38c211d8949b688a4fbcafe5bdd137e0310487d0a0baadc8')
+('0xd2a1d068baac0b06a8e2b1dc924a43d81a6da325', '0x2da56a81b46a5d500f1e0e954a8c73929124c5713fad8e67b720154a67c4ab90')
+('0x1c3d23828c886e6138b725c4bce41f90ab19f10e', '0xd808f494c17489cc6e850513248f6a230e46b255987c583de52c7264ca46e4fc')
+('0xd2a1d068baac0b06a8e2b1dc924a43d81a6da325', '0x083a87ef653ce841653bbb9e550e91fade0fe55f91f57ba46720b97db509ae9e')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0xaa61-setSaneRate-0xaccdeccc-start,0xaa61-setSaneRate-0xaccdeccc-end> ', ' <0x1cf2-guess_34cf5561-0x34cf5561-start,0x1cf2-guess_34cf5561-0x34cf5561-end> ', ' <0xaa61-clearSaneRate-0xe54699c1-start,0xaa61-clearSaneRate-0xe54699c1-end> '] 1
+('0x3b21d6d25e7f036c8277efe9a7ebf17ca12fe4f6', '0xfb83ff76dc6288d7acae2016c2b9abd73a1670b8447541774a46ea339299eabf')
+ == User-assisted Contract Call Flows: 
+[' <0x1cf2-payInterestForOracle-0x327ab639-start,0x1cf2-payInterestForOracle-0x327ab639-end> ', ' <0x1cf2-0xb1eac3ad-0xb1eac3ad-start,0x1cf2-0xb1eac3ad-0xb1eac3ad-end> '] 1
+('0xba7c422e484b2cae9ac959c0f5f91cc1729a5a25', '0xf74c042c28417a7b5f04dcd072400219c04f19161c9ac9adaf02933a8ef9b15e')
+ == Hack Call Flows: 
+[' <0x77f9-flashBorrowToken-0x66fa576f-start, <0x1cf2-payInterestForOracle-0x327ab639-start,0x1cf2-payInterestForOracle-0x327ab639-end>  <0x77f9-0xcfb65bb9-start,0x77f9-0xcfb65bb9-end> 0x77f9-flashBorrowToken-0x66fa576f-end> '] 1
+('0x77f973fcaf871459aa58cd81881ce453759281bc', '0x762881b07feb63c436dee38edd4ff1f7a74c33091e534af56c9f7d49b5ecac15')
+False positives:  2  out of  213
+False positive ratio 0.9389671361502347 %
+
+
+
+
+benchmark:  CreamFi1_1
+reEntrancyName:  ['borrow']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  37
+Simple Txs to Simple Protocol (2):  56310
+User-assisted Contract (3 + 4 + 5 + 6):  1841
+all classified tx:  58188 / 17455
+hack
+before pruneRAW:  [' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x2db6-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end>  <0xd065-borrow-0xc5ebeaec-start,0xd065-borrow-0xc5ebeaec-end> 0x2db6-borrow-0xc5ebeaec-end> ']
+tx:  0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6
+ == Simple Txs to Simple Protocol: 
+('0xd06527d5e56a3495252a528c4987003b712860ee', '0x780992f25eb7525feebf4ef43696b2918026a9d941bc76efca3a7c0fd1f0ef58')
+('0xa65405e0dd378c65308deae51da9e3bcebb81261', '0xdf7976b0fe8d2d32768c9d8b74f87b087376c22b273c01392294d68e0e7409f4')
+('0x06091717521c2002f2859c75f53987eaf1e5aa2f', '0x9fff4a944104ed9849c16593c80bc1a3fd6683bb11d6cd7930486f50a39828bf')
+('0xcbae0a83f4f9926997c8339545fb8ee32edc6b76', '0xeeec9cb0828ad54e5561df7fc59fe32be398cd5783add419f7fcb94deb68962d')
+('0x44fbebd2f576670a6c33f6fc0b00aa8c5753b322', '0xe1f6c09589889e7c87fbf20c1d63f1fe778bc858fb77fb20105775ce02ab8876')
+('0x1d09144f3479bb805cb7c92346987420bcbdc10c', '0xeec04bc527f3665b1e357a058f8bfccfbafc14ed7302e2f0c675faa796f919aa')
+('0x2db6c82ce72c8d7d770ba1b5f5ed0b6e075066d6', '0xe2530761ad264d978d755940908c1945e4c8a2b09ad35e6f31c7f55be59cb0e7')
+('0x6d5a7597896a703fe8c85775b23395a48f971305', '0x20e46af0510b1dd66d1f3d65a2532c7e43fffbbbc87f9dec2204992e321318b9')
+('0x6d5a7597896a703fe8c85775b23395a48f971305', '0x1f9f5cedddf37dddb24cb9d9a511e3e17b72e9d2e0ef661d6ce2ae380a10d21b')
+('0x6d5a7597896a703fe8c85775b23395a48f971305', '0x0209837f58c00816cf46ee6305d0c8a5c627c231e83a93a5fac90e17bf64b21f')
+('0xd7de27e74f1ca2ce413e19a0b30fcc95395bfcd9', '0xd2865420631bb59d29aebd937dd47ca87f92c89cf2f8fc954e0ff479baa781d4')
+('0xd7de27e74f1ca2ce413e19a0b30fcc95395bfcd9', '0xffe16d86585190c1d492a373495aca54c92d835ef4cd3c08062b45ed8fd4c07f')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> '] 240
+('0x11111254369792b2ca5d084ab5eea397ca8fa48b', '0x23e6eba63b55e1ee5acf162085b0f4bae44078daaa7c50c59814c287b62c1ebb')
+[' <0x3d5b-claimComp-0xe9af0292-start,0x3d5b-claimComp-0xe9af0292-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 45
+('0x222412af183bceadefd72e4cb1b71f1889953b1c', '0x65f5358e855da9f5f6e41c1b539c8fb75b21b947737e97dbb0b4af8f836d1b7e')
+[' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 18
+('0x8e298734681adbfc41ee5d17ff8b0d6d803e7098', '0x3b8f35d1758951ce1fe35ca229c223eee0718973099f0b15812d5aee97634718')
+[' <0x3d5b-claimComp-0x1c3db2e0-start,0x3d5b-claimComp-0x1c3db2e0-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 5
+('0x2c361913e2da663e1898162ec01497c46eb87abf', '0xd0570ec590970f615b4d5837d4bd253d9884aec215fa8084e26568212025d647')
+[' <0xd065-accrueInterest-0xa6afed95-start,0xd065-accrueInterest-0xa6afed95-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 4
+('0xc40d5980f1c46b32c17d4694214488997411a3b7', '0xe05e694272407586ec1cc9503df59da286a8b229e0504504e6987d005be41a7d')
+[' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 4
+('0x11111112542d85b3ef69ae05771c2dccff4faa26', '0x17cee717b6e2aa6c0844a7261deeb8676e81150ae6c75bfd67e8482499fe2f76')
+[' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> '] 3
+('0x11111254369792b2ca5d084ab5eea397ca8fa48b', '0x7f6933d756b89d7114e76be51c52636b4070d2bd06320ff7ac251a28933ab324')
+[' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> '] 3
+('0x97785a81b3505ea9026b2affa709dfd0c9ef24f6', '0xa9fda22abe2c93f066c88d9577bcd6e3447b52666f49810af0678c80b85462dd')
+[' <0x3d5b-claimComp-0xe9af0292-start,0x3d5b-claimComp-0xe9af0292-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 2
+('0x8e298734681adbfc41ee5d17ff8b0d6d803e7098', '0x4482df10258c414853155be260ce4626a645779aa9b600deead35eb621395675')
+[' <0x3d5b-claimComp-0xe9af0292-start,0x3d5b-claimComp-0xe9af0292-end> ', ' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> '] 2
+('0x8e298734681adbfc41ee5d17ff8b0d6d803e7098', '0xfe190473515949e883ea460d39329374e6a50d4ef940b43886e275d5b38ad342')
+[' <0x3d5b-claimComp-0x1c3db2e0-start,0x3d5b-claimComp-0x1c3db2e0-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 2
+('0x2c361913e2da663e1898162ec01497c46eb87abf', '0xd7daa33b088da5e1cbb1580780f6eef14fa0e047209227a027ad32932a9b73f8')
+[' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> '] 1
+('0x7a250d5630b4cf539739df2c5dacb4c659f2488d', '0xc4528b17e766133a67bc26b4c53a85fc3ebfc7ccdff0c99828743e68605ae2a4')
+[' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> '] 1
+('0x11111254369792b2ca5d084ab5eea397ca8fa48b', '0x674e216e9add0351e547af829d61a54939a883692d1bb237e889f58fe330f323')
+[' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 1
+('0x97785a81b3505ea9026b2affa709dfd0c9ef24f6', '0x95f1eb8966f281a49fe5a80596e76fef847b4a0940e44d2676a8554fc6ff2820')
+[' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 1
+('0xc40d5980f1c46b32c17d4694214488997411a3b7', '0x6202a25587a4de70a7fbe9e52a9de94bea475c63948ecab9eaaa7eb27fa11907')
+ == User-assisted Contract Call Flows: 
+[' <0xd065-accrueInterest-0xa6afed95-start,0xd065-accrueInterest-0xa6afed95-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 180
+('0x9799b475dec92bd99bbdd943013325c36157f383', '0xa385e372c5aae3c708f650604609bb15193bc16e3d232571c34a4c3b525cdd46')
+[' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0x3d5b-seizeAllowed-0xd02f7351-start,0x3d5b-seizeAllowed-0xd02f7351-end> '] 47
+('0x9799b475dec92bd99bbdd943013325c36157f383', '0x5c7fe1f451af757f038fd9254f11886c384e5ed957bf8d45d8bc1f495930731b')
+[' <0xd065-accrueInterest-0xa6afed95-start,0xd065-accrueInterest-0xa6afed95-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 32
+('0xa57bd00134b2850b2a1c55860c9e9ea100fdd6cf', '0xb144debccef4bdb21b8cb7722012c5a31df5f92b2e24696df853aafcb2d78ab6')
+[' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 12
+('0x2f1f217d6aa17fc944c450c7e8246932f98b36c0', '0xec9fe1905d33fc3fc3cb3e41ce19457cad361073f2be9cc9ef3883012f9a7984')
+[' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0xd065-accrueInterest-0xa6afed95-start,0xd065-accrueInterest-0xa6afed95-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 8
+('0xe7e467c7bfd1a3d5ce385d06557865fabe7b0ce2', '0xbc395e40ec7d4646b77b651ffa0bbf797208ce4b2ac9d8211a5a4c75dedc2dd7')
+[' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 6
+('0x2f1f217d6aa17fc944c450c7e8246932f98b36c0', '0x128ebb03ac2ed6a4a3848efa07cc8040be7d1649adce4f3a1fd438c9866a7e1d')
+[' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 6
+('0xb4e2a5c63de2785ddcf0885e40875e54f7c27c78', '0x6b7ffc3bde52f6d3579c0cac7a3dcdc7ddc4b2817a4f2f8009d3b814322bfe3a')
+[' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 3
+('0x71a6fbc22ca1eb6fdaca151fbbbc6027aacefdd8', '0x19fe189b46830c22ab36c933eb534c8eb25a74d9d25347f2f80094a887f99a87')
+[' <0xd065-borrowBalanceCurrent-0x17bfdfbc-start,0xd065-borrowBalanceCurrent-0x17bfdfbc-end> ', ' <0xd065-liquidateBorrow-0xaae40a2a-start,0xd065-liquidateBorrow-0xaae40a2a-end> '] 3
+('0xbed0ee208412dd15bc1c4b91e5e926c3296e3e08', '0xc24709f5dc442137661e6df6a7b64e9b1d25cb40ea12668b3fd4ae07c2718ef9')
+[' <0x3d5b-claimComp-0xe9af0292-start,0x3d5b-claimComp-0xe9af0292-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 2
+('0xf1499aae3f8f9cf925b663568a964385898b53c2', '0xa7ead29fd4cc5279780e44632139ff7522790624e1c29c6340ea0adf9a101f20')
+[' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 2
+('0xb0362b45df39a5bf8e2a6ebf57b96e20157a4538', '0xa22efd2898f90c801848a8bc1df7ad1f7b07d89ad78707d384f9d2e4deb428fe')
+[' <0x2db6-balanceOfUnderlying-0x3af9e669-start,0x2db6-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-liquidateBorrow-0xaae40a2a-start,0xd065-liquidateBorrow-0xaae40a2a-end> ', ' <0x2db6-redeem-0xdb006a75-start,0x2db6-redeem-0xdb006a75-end> '] 2
+('0xb4e2a5c63de2785ddcf0885e40875e54f7c27c78', '0x2c9527b6d6505c3852025e87b631a847d68d390bb640f632cd8e8afd7035810d')
+[' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 2
+('0xb4e2a5c63de2785ddcf0885e40875e54f7c27c78', '0x0213038c0c10c08fdce5c398433e1a3b5522ada96b3a386da20584c47f039a20')
+[' <0xd065-liquidateBorrow-0xaae40a2a-start,0xd065-liquidateBorrow-0xaae40a2a-end> ', ' <0x2db6-redeem-0xdb006a75-start,0x2db6-redeem-0xdb006a75-end> '] 1
+('0xa57bd00134b2850b2a1c55860c9e9ea100fdd6cf', '0xcf79fd006dbc796d24ca80639a7d67fbd240cde789ea2ffe691e742628751c6b')
+[' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 1
+('0x71a6fbc22ca1eb6fdaca151fbbbc6027aacefdd8', '0xd40122d4a819353273bac8aa406b42dcd77ae214fabdd8a734d55d5c9764a663')
+[' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 1
+('0xb0362b45df39a5bf8e2a6ebf57b96e20157a4538', '0x02a5265b8c8edee14b78de48428dd7d69455c5469030dfa0ac08daf3499b88fb')
+[' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> '] 1
+('0x9ccf93089cb14f94baeb8822f8ceffd91bd71649', '0x241e877254090b46806885a8dad47e58ad837512a6a5637ccb1e6eecbd68a30e')
+[' <0xd065-balanceOfUnderlying-0x3af9e669-start,0xd065-balanceOfUnderlying-0x3af9e669-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0xd065-redeemUnderlying-0x852a12e3-start,0xd065-redeemUnderlying-0x852a12e3-end> '] 1
+('0x9ccf93089cb14f94baeb8822f8ceffd91bd71649', '0x897d31c987f8319f2d7dc8684ffee9d8e5d8e6e3fcd5ab89e968606320217e88')
+[' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> '] 1
+('0x9ccf93089cb14f94baeb8822f8ceffd91bd71649', '0x47ef446d7b746369d498b74acda656fa3d290923a1f99b03e2fb7cf6255a712a')
+[' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> ', ' <0x3d5b-mintAllowed-0x4ef4c3e1-start,0x3d5b-mintAllowed-0x4ef4c3e1-end> ', ' <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> '] 1
+('0x109a325a32f8518c963e682f2d96f5e82d9dd9e6', '0xfa90476781b1957b88b736277057ea9937b5e5abf5a9d453c71b967c4b85a629')
+[' <0xd065-liquidateBorrow-0xaae40a2a-start,0xd065-liquidateBorrow-0xaae40a2a-end> ', ' <0x3d5b-transferAllowed-0xbdcdc258-start,0x3d5b-transferAllowed-0xbdcdc258-end> '] 1
+('0xaeb7d6d37078dc823cbd7998fee55dfdee121cc8', '0x64aef37ce659581f327ef4151bd53f62d2ddd57a9f0ed79c4e4232c936c59331')
+[' <0x2db6-balanceOfUnderlying-0x3af9e669-start,0x2db6-balanceOfUnderlying-0x3af9e669-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0x2db6-seize-0xb2a02ff1-start,0x2db6-seize-0xb2a02ff1-end> ', ' <0x2db6-redeem-0xdb006a75-start,0x2db6-redeem-0xdb006a75-end> '] 1
+('0xb4e2a5c63de2785ddcf0885e40875e54f7c27c78', '0xe58ebf7a5ff63c4dbc7c907e43856ed3f1ef2d69e3a9866a47875bdc5be06dd9')
+[' <0x2db6-accrueInterest-0xa6afed95-start,0x2db6-accrueInterest-0xa6afed95-end> ', ' <0x3d5b-repayBorrowAllowed-0x24008a62-start,0x3d5b-repayBorrowAllowed-0x24008a62-end> ', ' <0x2db6-seize-0xb2a02ff1-start,0x2db6-seize-0xb2a02ff1-end> ', ' <0x2db6-redeem-0xdb006a75-start,0x2db6-redeem-0xdb006a75-end> '] 1
+('0x1d1694d0fa9ec37ba6f1b211948fa2cfaa9d896b', '0x83d06f50f038fcc7d74c243003d870df511f3933e1768a703a65f6b543427c88')
+[' <0xd065-borrowBalanceCurrent-0x17bfdfbc-start,0xd065-borrowBalanceCurrent-0x17bfdfbc-end> ', ' <0xd065-repayBorrowBehalf-0xe5974619-start,0xd065-repayBorrowBehalf-0xe5974619-end> '] 1
+('0x0000006daea1723962647b7e189d311d757fb793', '0x9cfea0e5673438f6f39ccb15f3c0edb74156c37cb2000bd07e25c42aed4f78cf')
+ == Hack Call Flows: 
+[' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x2db6-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end>  <0xd065-borrow-0xc5ebeaec-start,0xd065-borrow-0xc5ebeaec-end> 0x2db6-borrow-0xc5ebeaec-end> '] 1
+('0xbd51cb8c06f768d3225b613b79b1386f4c83d1fa', '0x0016745693d68d734faa408b94cdf2d6c95f511b50f47b03909dc599c1dd9ff6')
+False positives:  648  out of  17455
+False positive ratio 3.7124033228301343 %
+
+
+
+
+benchmark:  RariCapital2_3
+reEntrancyName:  ['borrow']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  18
+Simple Txs to Simple Protocol (2):  698
+User-assisted Contract (3 + 4 + 5 + 6):  843
+all classified tx:  1559 / 447
+hack
+before pruneRAW:  [' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-accrueInterest-0xa6afed95-start,0xebe0-accrueInterest-0xa6afed95-end> ', ' <0xebe0-mint-0xa0712d68-start,0xebe0-mint-0xa0712d68-end> ', ' <0x2626-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end>  <0x3f2d-exitMarket-0xede4edd0-start,0x3f2d-exitMarket-0xede4edd0-end> 0x2626-borrow-0xc5ebeaec-end> ', ' <0xebe0-redeemUnderlying-0x852a12e3-start,0xebe0-redeemUnderlying-0x852a12e3-end> ', ' <0x2626-mint-0x1249c58b-start,0x2626-mint-0x1249c58b-end> ', ' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0xebe0-borrow-0xc5ebeaec-end> ', ' <0xe097-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0xe097-borrow-0xc5ebeaec-end> ', ' <0x8922-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0x8922-borrow-0xc5ebeaec-end> ', ' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-mint-0xa0712d68-start,0xebe0-mint-0xa0712d68-end> ', ' <0x2626-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end>  <0x3f2d-exitMarket-0xede4edd0-start,0x3f2d-exitMarket-0xede4edd0-end> 0x2626-borrow-0xc5ebeaec-end> ', ' <0xebe0-redeemUnderlying-0x852a12e3-start,0xebe0-redeemUnderlying-0x852a12e3-end> ', ' <0x2626-redeemUnderlying-0x852a12e3-start,0x2626-redeemUnderlying-0x852a12e3-end> ']
+tx:  0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530
+ == Simple Txs to Simple Protocol: 
+('0x8922c1147e141c055fddfc0ed5a119f3378c8ef8', '0x3d81a43d284e6659d2d15aa5470bde6241e419140f0978c69a5e331836d044a1')
+('0xebe0d1cb6a0b8569929e062d67bfbc07608f0a47', '0x830288e9426884c0686a4da72c971d14354a53ae8ecd29c18c8f9e1010165753')
+('0x26267e41ceca7c8e0f143554af707336f27fa051', '0xd92bae4e23d797139cbe335a97252ef397993fc420aea3029d473775cfe5882f')
+('0xe097783483d1b7527152ef8b150b99b9b2700c8d', '0x7ef8ce46f36df1c7368ef076d86750f7a259e5abf709441ada0524c574de5007')
+('0xe097783483d1b7527152ef8b150b99b9b2700c8d', '0x4af423ca635b3aa739987c96cae40e761a4a0bd29c34a47e2f790972d5332316')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0xebe0-accrueInterest-0xa6afed95-start,0xebe0-accrueInterest-0xa6afed95-end> ', ' <0xebe0-seize-0xb2a02ff1-start,0xebe0-seize-0xb2a02ff1-end> '] 2
+('0xf0a6b4f7f26f6188d821cfbc69a31fb0bbb9702f', '0xfe79c096e1cb35dff011fe15518643a9f7d5bb410fcf8a69b5d2d182fe62cc45')
+[' <0xe097-accrueInterest-0xa6afed95-start,0xe097-accrueInterest-0xa6afed95-end> ', ' <0xe097-seize-0xb2a02ff1-start,0xe097-seize-0xb2a02ff1-end> '] 1
+('0x3a0135418db6f9428fe669ee1162a1450612c33c', '0x0a0981dfa3b65373c8e9f0a6bbcf53524b0d41091d08fa5c507c01e3fa460446')
+ == User-assisted Contract Call Flows: 
+[' <0xebe0-accrueInterest-0xa6afed95-start,0xebe0-accrueInterest-0xa6afed95-end> ', ' <0xebe0-seize-0xb2a02ff1-start,0xebe0-seize-0xb2a02ff1-end> ', ' <0xebe0-redeem-0xdb006a75-start,0xebe0-redeem-0xdb006a75-end> '] 5
+('0x811213d2d0e26ecf65714074cef59119dd7f36d9', '0x924f3a79f398587489a375ecdec058202d828289fb026fcd821c54797c940cd8')
+[' <0xebe0-accrueInterest-0xa6afed95-start,0xebe0-accrueInterest-0xa6afed95-end> ', ' <0xebe0-seize-0xb2a02ff1-start,0xebe0-seize-0xb2a02ff1-end> ', ' <0xebe0-redeemUnderlying-0x852a12e3-start,0xebe0-redeemUnderlying-0x852a12e3-end> '] 4
+('0xeef86c2e49e11345f1a693675df9a38f7d880c8f', '0x95d7aefb988f3eea3ea9aeb50ed0cbb1a1f031fdff85b43139c48db115ba94ba')
+[' <0xe097-accrueInterest-0xa6afed95-start,0xe097-accrueInterest-0xa6afed95-end> ', ' <0xe097-seize-0xb2a02ff1-start,0xe097-seize-0xb2a02ff1-end> ', ' <0xe097-redeem-0xdb006a75-start,0xe097-redeem-0xdb006a75-end> '] 3
+('0x07197a25bf7297c2c41dd09a79160d05b6232bcf', '0xaab300b39f17f40d561267a5c5cc7e29beb168e9ebe5367cfc190f4f024464d7')
+[' <0xebe0-liquidateBorrow-0xf5e3c462-start,0xebe0-liquidateBorrow-0xf5e3c462-end> ', ' <0x2626-redeem-0xdb006a75-start,0x2626-redeem-0xdb006a75-end> '] 1
+('0x44ccdcd59984848a749e9f999b08f2b68153e123', '0xac46d768d41f672426b08f11a2c4272e2d9b8a44ebdde7d6815330cbf6651594')
+ == Hack Call Flows: 
+[' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-accrueInterest-0xa6afed95-start,0xebe0-accrueInterest-0xa6afed95-end> ', ' <0xebe0-mint-0xa0712d68-start,0xebe0-mint-0xa0712d68-end> ', ' <0x2626-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end>  <0x3f2d-exitMarket-0xede4edd0-start,0x3f2d-exitMarket-0xede4edd0-end> 0x2626-borrow-0xc5ebeaec-end> ', ' <0xebe0-redeemUnderlying-0x852a12e3-start,0xebe0-redeemUnderlying-0x852a12e3-end> ', ' <0x2626-mint-0x1249c58b-start,0x2626-mint-0x1249c58b-end> ', ' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0xebe0-borrow-0xc5ebeaec-end> ', ' <0xe097-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0xe097-borrow-0xc5ebeaec-end> ', ' <0x8922-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end> 0x8922-borrow-0xc5ebeaec-end> ', ' <0x3f2d-enterMarkets-0xc2998238-start,0x3f2d-enterMarkets-0xc2998238-end> ', ' <0xebe0-mint-0xa0712d68-start,0xebe0-mint-0xa0712d68-end> ', ' <0x2626-borrow-0xc5ebeaec-start, <0x3f2d-0xdd5cd22c-start,0x3f2d-0xdd5cd22c-end>  <0x3f2d-borrowAllowed-0xda3d454c-start,0x3f2d-borrowAllowed-0xda3d454c-end>  <0x3f2d-exitMarket-0xede4edd0-start,0x3f2d-exitMarket-0xede4edd0-end> 0x2626-borrow-0xc5ebeaec-end> ', ' <0xebe0-redeemUnderlying-0x852a12e3-start,0xebe0-redeemUnderlying-0x852a12e3-end> ', ' <0x2626-redeemUnderlying-0x852a12e3-start,0x2626-redeemUnderlying-0x852a12e3-end> '] 1
+('0x32075bad9050d4767018084f0cb87b3182d36c45', '0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530')
+False positives:  16  out of  447
+False positive ratio 3.5794183445190155 %
+
+
+
+
+benchmark:  CreamFi2_4
+reEntrancyName:  ['borrow']
+Category Counts: 
+No Func Access (0):  0
+Deployer Transaction (1):  25
+Simple Txs to Simple Protocol (2):  1501
+User-assisted Contract (3 + 4 + 5 + 6):  434
+all classified tx:  1960 / 600
+hack
+before pruneRAW:  [' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0xd065-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xd065-borrow-0xc5ebeaec-end> ', ' <0xfd60-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xfd60-borrow-0xc5ebeaec-end> ', ' <0x2286-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x2286-borrow-0xc5ebeaec-end> ', ' <0xeff0-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xeff0-borrow-0xc5ebeaec-end> ', ' <0x299e-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x299e-borrow-0xc5ebeaec-end> ', ' <0x8379-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x8379-borrow-0xc5ebeaec-end> ', ' <0x2a53-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x2a53-borrow-0xc5ebeaec-end> ', ' <0xe89a-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xe89a-borrow-0xc5ebeaec-end> ', ' <0x44fb-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x44fb-borrow-0xc5ebeaec-end> ', ' <0x8c3b-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x8c3b-borrow-0xc5ebeaec-end> ', ' <0x797a-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x797a-borrow-0xc5ebeaec-end> ', ' <0x1f9b-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x1f9b-borrow-0xc5ebeaec-end> ', ' <0x523e-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x523e-borrow-0xc5ebeaec-end> ', ' <0x10fd-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x10fd-borrow-0xc5ebeaec-end> ', ' <0x4112-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4112-borrow-0xc5ebeaec-end> ']
+tx:  0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92
+ == Simple Txs to Simple Protocol: 
+('0x44fbebd2f576670a6c33f6fc0b00aa8c5753b322', '0xadf5de0c57c6cfe0baf574cde9aa4041e1a9daf26a70b6e96b3ae103add244b7')
+('0x797aab1ce7c01eb727ab980762ba88e7133d2157', '0x1f4b05fc5cabac281a97c5a7d65001cea8be0334601d4efbebcf2ec378ecdd04')
+('0x8c3b7a4320ba70f8239f83770c4015b5bc4e6f91', '0x768b4e348ec58b719083004438f48446fd4f9ad67589fad1ed14f5468856e50f')
+('0x299e254a8a165bbeb76d9d69305013329eea3a3b', '0x814f8a2e08f6f60470dfae590967487f84be15199346cffef77d0eacdce8e6d6')
+('0x523effc8bfefc2948211a05a905f761cba5e8e9e', '0x934d08e2a5a977f401d868f4245fcdad712a8f68d6ff6586136a4b0a84278007')
+('0x4112a717edd051f77d834a6703a1ef5e3d73387f', '0x149c71fa24d299e790df21a0e231f7f957c40777d1c2453c97c2f563f6f29e66')
+('0x8379baa817c5c5ab929b03ee8e3c48e45018ae41', '0x52da1443bd6830ae9ef0e856ab96433977137b9c011380ff74179587c78d0812')
+('0xd06527d5e56a3495252a528c4987003b712860ee', '0x780992f25eb7525feebf4ef43696b2918026a9d941bc76efca3a7c0fd1f0ef58')
+('0xeff039c3c1d668f408d09dd7b63008622a77532c', '0xe8f2194847036a496fe6d309d7a1fb1edcef9ab1bd1534c712b8f13d4242882b')
+('0x1f9b4756b008106c806c7e64322d7ed3b72cb284', '0x17d01a922bf19e839e60aee8a47b578006ff57003eb8357dfb6a688bb619b45d')
+('0x2a537fa9ffaea8c1a41d3c2b68a9cb791529366d', '0x262e5f88e65d60d1178f04f3680a7049e12c3d4a697ce0eb94a8d709a3b5b134')
+ == Another Famous DeFi Protocol Call Flows: 
+[' <0x44fb-exchangeRateCurrent-0xbd6d894d-start,0x44fb-exchangeRateCurrent-0xbd6d894d-end> ', ' <0x44fb-redeemUnderlying-0x852a12e3-start,0x44fb-redeemUnderlying-0x852a12e3-end> '] 12
+('0x62e479060c89c48199fc7ad43b1432cc585ba1b9', '0x391a90d78934c2a4144d934a16543770e3b940619697ddbc447f84abdb51331f')
+[' <0x44fb-exchangeRateCurrent-0xbd6d894d-start,0x44fb-exchangeRateCurrent-0xbd6d894d-end> ', ' <0x44fb-mint-0xa0712d68-start,0x44fb-mint-0xa0712d68-end> '] 2
+('0x62e479060c89c48199fc7ad43b1432cc585ba1b9', '0x6c4eacf1b19c2791e2878e482e38ef2e6af118a8d4f8ddf7ed035601c86612fe')
+[' <0x797a-exchangeRateCurrent-0xbd6d894d-start,0x797a-exchangeRateCurrent-0xbd6d894d-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> '] 2
+('0xc45f49be156888a1c0c93dc0fe7dc89091e291f5', '0x4e84485ee55cf5f9ebf3c7ee2c153db22eb3f3a1750e5ea83c0c7895c35def62')
+ == User-assisted Contract Call Flows: 
+[' <0x797a-accrueInterest-0xa6afed95-start,0x797a-accrueInterest-0xa6afed95-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> '] 16
+('0x8eacba80bee37ed291b084752375c49cd489590b', '0x5b84ba70e3907c0208cfe94f016478b6ea5811f4b8a84fe66bb1926c307afea1')
+[' <0x44fb-balanceOfUnderlying-0x3af9e669-start,0x44fb-balanceOfUnderlying-0x3af9e669-end> ', ' <0x44fb-redeemUnderlying-0x852a12e3-start,0x44fb-redeemUnderlying-0x852a12e3-end> ', ' <0x44fb-mint-0xa0712d68-start,0x44fb-mint-0xa0712d68-end> '] 12
+('0x9b2688da7d80641f6e46a76889ea7f8b59771724', '0xd5f690bfbde44ffcd1915a979eb0e6ceb15c2c9389f574eda0dd102ab93bd491')
+[' <0x44fb-accrueInterest-0xa6afed95-start,0x44fb-accrueInterest-0xa6afed95-end> ', ' <0x44fb-seize-0xb2a02ff1-start,0x44fb-seize-0xb2a02ff1-end> ', ' <0x44fb-redeem-0xdb006a75-start,0x44fb-redeem-0xdb006a75-end> '] 10
+('0x2d0f3b2abe9d61a21812023bb28cd2da7c3f30b9', '0xd3b17cfe6563c0c6ab04107c880122a0774dc0184428248a7d3aef32315456a7')
+[' <0x797a-balanceOfUnderlying-0x3af9e669-start,0x797a-balanceOfUnderlying-0x3af9e669-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> ', ' <0x797a-mint-0xa0712d68-start,0x797a-mint-0xa0712d68-end> '] 10
+('0x6419cb544878e8c4faa5eaf22d59d4a96e5f12fa', '0xbc5bfc8f4c32b76c15669ed8c20d88e64ffe9d5a3edccd96f9f7e3a794dbefbc')
+[' <0x797a-balanceOfUnderlying-0x3af9e669-start,0x797a-balanceOfUnderlying-0x3af9e669-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> '] 6
+('0x641befa4db601578a64f0fc1f4e89e9869268fe7', '0xd4d3eacd1a3dd9a4f2531dbfda64e3ebfc479f831d10631e8c43d5feabf078b7')
+[' <0x797a-accrueInterest-0xa6afed95-start,0x797a-accrueInterest-0xa6afed95-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> ', ' <0x797a-mint-0xa0712d68-start,0x797a-mint-0xa0712d68-end> '] 6
+('0x8eacba80bee37ed291b084752375c49cd489590b', '0xef4bd41d83e5f7c02839f03bc8580f2f6abcbbd51ee6852d32bf81c3ffe93bff')
+[' <0xd065-accrueInterest-0xa6afed95-start,0xd065-accrueInterest-0xa6afed95-end> ', ' <0xd065-seize-0xb2a02ff1-start,0xd065-seize-0xb2a02ff1-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 5
+('0xdff523be6002e59a4a2242d99afccb502d4ed020', '0xbd8b36d635008bba3a95eb04eecb7a3e882fc4ef5b6401c54a960d30c1d72d6c')
+[' <0x44fb-balanceOfUnderlying-0x3af9e669-start,0x44fb-balanceOfUnderlying-0x3af9e669-end> ', ' <0x44fb-redeemUnderlying-0x852a12e3-start,0x44fb-redeemUnderlying-0x852a12e3-end> '] 5
+('0x641befa4db601578a64f0fc1f4e89e9869268fe7', '0x45a02d02d386deaf2d099ede69e1eb96d9c769704547a3368cd70677bf3a62fb')
+[' <0xe89a-accrueInterest-0xa6afed95-start,0xe89a-accrueInterest-0xa6afed95-end> ', ' <0xe89a-seize-0xb2a02ff1-start,0xe89a-seize-0xb2a02ff1-end> ', ' <0xe89a-redeem-0xdb006a75-start,0xe89a-redeem-0xdb006a75-end> '] 2
+('0xdff523be6002e59a4a2242d99afccb502d4ed020', '0x5dce27889e1359a3b84ba57c7b436cc976cf9449330dddc2f70db096df7d7fc9')
+[' <0x44fb-balanceOfUnderlying-0x3af9e669-start,0x44fb-balanceOfUnderlying-0x3af9e669-end> ', ' <0x44fb-redeemUnderlying-0x852a12e3-start,0x44fb-redeemUnderlying-0x852a12e3-end> ', ' <0x797a-balanceOfUnderlying-0x3af9e669-start,0x797a-balanceOfUnderlying-0x3af9e669-end> ', ' <0x797a-redeemUnderlying-0x852a12e3-start,0x797a-redeemUnderlying-0x852a12e3-end> '] 2
+('0x641befa4db601578a64f0fc1f4e89e9869268fe7', '0x35e99a708d37d0e88b7c701cf105eaea98321f23fd146c5f853faa8931b5f0c4')
+[' <0x44fb-liquidateBorrow-0xf5e3c462-start,0x44fb-liquidateBorrow-0xf5e3c462-end> ', ' <0x2286-redeem-0xdb006a75-start,0x2286-redeem-0xdb006a75-end> '] 2
+('0xd44863de45380ec7e2e9ab28d53ad52d442cd111', '0xe9dcfc15bb1992792c6cdb54acb65a8a5c1aff6b8463ee7a615f60e542675d8d')
+[' <0x2a53-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x2a53-borrow-0xc5ebeaec-end> '] 2
+('0x54ead71318003dfadb951fd83971faf5cddc7cf5', '0xb914dbcfbaea429aee2963ef14aa8d3efd505bbf649b043e21f95a649cea6831')
+[' <0x8c3b-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x8c3b-borrow-0xc5ebeaec-end> '] 2
+('0x54ead71318003dfadb951fd83971faf5cddc7cf5', '0x3c39f1afb17d78dd4b5f56b2fc529844aabe0b8be462acca34be69d86b121fd6')
+[' <0x299e-liquidateBorrow-0xf5e3c462-start,0x299e-liquidateBorrow-0xf5e3c462-end> ', ' <0x797a-redeem-0xdb006a75-start,0x797a-redeem-0xdb006a75-end> '] 1
+('0xdff523be6002e59a4a2242d99afccb502d4ed020', '0x3caedd9ae7cf31c9be8e59e8e654e4762b6d9875280528eb028a9160c753ae79')
+[' <0x797a-liquidateBorrow-0xf5e3c462-start,0x797a-liquidateBorrow-0xf5e3c462-end> ', ' <0x2286-redeem-0xdb006a75-start,0x2286-redeem-0xdb006a75-end> '] 1
+('0xdff523be6002e59a4a2242d99afccb502d4ed020', '0xda3bd02552aced9c6b697b4d6ed44bd7b805ac082fa0b9a37186f717c3821f6b')
+[' <0xfd60-accrueInterest-0xa6afed95-start,0xfd60-accrueInterest-0xa6afed95-end> ', ' <0xfd60-seize-0xb2a02ff1-start,0xfd60-seize-0xb2a02ff1-end> ', ' <0xfd60-redeem-0xdb006a75-start,0xfd60-redeem-0xdb006a75-end> '] 1
+('0x4a514260c29625885f36d70847f4c4f169ecd66a', '0xe5728172699a5e13df2321f14a3ef4ff90818d2da3e1682321ba7c94b7b35c43')
+[' <0x44fb-liquidateBorrow-0xf5e3c462-start,0x44fb-liquidateBorrow-0xf5e3c462-end> ', ' <0xfd60-redeem-0xdb006a75-start,0xfd60-redeem-0xdb006a75-end> '] 1
+('0x28f1ecd0e9303dd864dda1f8f60959e5b1a9089e', '0xe32b80d1bdcc0a15deac5d43d1247f2d873afacbd398a63661990bf8e6a0dde1')
+[' <0x797a-liquidateBorrow-0xf5e3c462-start,0x797a-liquidateBorrow-0xf5e3c462-end> ', ' <0x8379-redeem-0xdb006a75-start,0x8379-redeem-0xdb006a75-end> '] 1
+('0x4a514260c29625885f36d70847f4c4f169ecd66a', '0xcee2080f83494b0e5e68c4d5e29bf2d49d21df887c5598a90a7efd336f33ef01')
+[' <0x797a-liquidateBorrow-0xf5e3c462-start,0x797a-liquidateBorrow-0xf5e3c462-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 1
+('0x4a514260c29625885f36d70847f4c4f169ecd66a', '0xd3396e4881038d7ca3e46c5fa787f0a897572b50401e264fb6f76e9f75341f6b')
+[' <0x44fb-liquidateBorrow-0xf5e3c462-start,0x44fb-liquidateBorrow-0xf5e3c462-end> ', ' <0xd065-redeem-0xdb006a75-start,0xd065-redeem-0xdb006a75-end> '] 1
+('0x4a514260c29625885f36d70847f4c4f169ecd66a', '0xa9e69bb94d33633c6ea7ab2edee18574548a4b6e4e5b61ef34ef810a0ee8abc3')
+[' <0x2a53-accrueInterest-0xa6afed95-start,0x2a53-accrueInterest-0xa6afed95-end> ', ' <0x2a53-seize-0xb2a02ff1-start,0x2a53-seize-0xb2a02ff1-end> ', ' <0x2a53-redeem-0xdb006a75-start,0x2a53-redeem-0xdb006a75-end> '] 1
+('0xd44863de45380ec7e2e9ab28d53ad52d442cd111', '0x86a58277f403ea166c6058d947c11a20dc957136c4e7a53ead77738dfbdcb795')
+[' <0x299e-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x299e-borrow-0xc5ebeaec-end> '] 1
+('0xfbc98ec73b7ef8e699792cd529054874fd31fe8c', '0x8cf9563775d71077e53263d39639acf645cf9387221b86ce62095e96217d2dd5')
+[' <0x4112-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4112-borrow-0xc5ebeaec-end> '] 1
+('0xfbc98ec73b7ef8e699792cd529054874fd31fe8c', '0x385e2b4d180617449206e61f6d9e70326259a94acd4fd1b600f88b15019cc0fe')
+ == Hack Call Flows: 
+[' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0xd065-mint-0x1249c58b-start,0xd065-mint-0x1249c58b-end> ', ' <0x3d5b-enterMarkets-0xc2998238-start,0x3d5b-enterMarkets-0xc2998238-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0x4baa-mint-0xa0712d68-start,0x4baa-mint-0xa0712d68-end> ', ' <0x4baa-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4baa-borrow-0xc5ebeaec-end> ', ' <0xd065-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xd065-borrow-0xc5ebeaec-end> ', ' <0xfd60-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xfd60-borrow-0xc5ebeaec-end> ', ' <0x2286-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x2286-borrow-0xc5ebeaec-end> ', ' <0xeff0-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xeff0-borrow-0xc5ebeaec-end> ', ' <0x299e-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x299e-borrow-0xc5ebeaec-end> ', ' <0x8379-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x8379-borrow-0xc5ebeaec-end> ', ' <0x2a53-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x2a53-borrow-0xc5ebeaec-end> ', ' <0xe89a-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0xe89a-borrow-0xc5ebeaec-end> ', ' <0x44fb-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x44fb-borrow-0xc5ebeaec-end> ', ' <0x8c3b-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x8c3b-borrow-0xc5ebeaec-end> ', ' <0x797a-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x797a-borrow-0xc5ebeaec-end> ', ' <0x1f9b-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x1f9b-borrow-0xc5ebeaec-end> ', ' <0x523e-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x523e-borrow-0xc5ebeaec-end> ', ' <0x10fd-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x10fd-borrow-0xc5ebeaec-end> ', ' <0x4112-borrow-0xc5ebeaec-start, <0x3d5b-borrowAllowed-0xda3d454c-start,0x3d5b-borrowAllowed-0xda3d454c-end> 0x4112-borrow-0xc5ebeaec-end> '] 1
+('0x961d2b694d9097f35cfffa363ef98823928a330d', '0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92')
+False positives:  106  out of  600
+False positive ratio 17.666666666666668 %
